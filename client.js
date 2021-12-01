@@ -13,6 +13,13 @@ const connect = function () {
 
   conn.on('connect', () => {
     conn.write('Name: AS');
+    conn.write('Move: up');
+  });
+
+  conn.on("connect", () =>{
+    setTimeout(()=>{
+      conn.write('Move: up')
+    }, 500); 
   });
 
   // interpret incoming data as text
